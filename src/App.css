@@ -1,0 +1,247 @@
+/* CSS Reset Moderno */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: inherit;
+  line-height: 1.6;
+  background-color: #fafafa;
+  color: #333;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Reset para elementos comuns */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 600;
+}
+
+p, ul, ol, dl, dd, blockquote, pre {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Container principal mais limpo */
+.MuiContainer-root {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+@media (min-width: 600px) {
+  .MuiContainer-root {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+
+@media (min-width: 960px) {
+  .MuiContainer-root {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+}
+
+/* Correções específicas para o SyntaxHighlighter */
+.react-syntax-highlighter {
+  overflow-x: auto !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  font-size: 0.875rem !important;
+  line-height: 1.5 !important;
+}
+
+.react-syntax-highlighter pre {
+  margin: 0 !important;
+  padding: 16px !important;
+  overflow-x: auto !important;
+  white-space: pre !important;
+  word-wrap: normal !important;
+}
+
+.react-syntax-highlighter code {
+  background: none !important;
+  padding: 0 !important;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+}
+
+/* Melhorias para Material-UI */
+.MuiPaper-root {
+  overflow: hidden !important;
+}
+
+.MuiCard-root {
+  width: 100% !important;
+  overflow: hidden !important;
+}
+
+.MuiCardContent-root {
+  word-break: break-word !important;
+}
+
+.MuiTabs-root {
+  overflow-x: auto !important;
+  scrollbar-width: thin;
+}
+
+.MuiTabs-root::-webkit-scrollbar {
+  height: 4px;
+}
+
+.MuiTabs-root::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.MuiTabs-root::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.MuiTab-root {
+  min-width: 120px !important;
+  text-transform: none !important;
+  font-weight: 500 !important;
+}
+
+.MuiAccordionDetails-root {
+  padding: 16px !important;
+  overflow-x: hidden !important;
+}
+
+.MuiAccordionDetails-root > * {
+  max-width: 100% !important;
+}
+
+.MuiAlert-root {
+  word-break: break-word !important;
+}
+
+.MuiTextField-root {
+  width: 100% !important;
+}
+
+.MuiStack-root {
+  width: 100% !important;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .MuiContainer-root {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+  
+  .MuiCard-root .MuiCardContent-root {
+    padding: 12px !important;
+  }
+  
+  .MuiTypography-h4 {
+    font-size: 1.5rem !important;
+  }
+  
+  .MuiTypography-h6 {
+    font-size: 1.125rem !important;
+  }
+  
+  .MuiTab-root {
+    min-width: 100px !important;
+    font-size: 0.875rem !important;
+    padding: 8px 12px !important;
+  }
+  
+  .react-syntax-highlighter {
+    font-size: 0.8rem !important;
+  }
+  
+  .react-syntax-highlighter pre {
+    padding: 12px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .MuiContainer-root {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+  
+  .MuiCard-root .MuiCardContent-root {
+    padding: 8px !important;
+  }
+  
+  .MuiTab-root {
+    min-width: 80px !important;
+    font-size: 0.8rem !important;
+    padding: 6px 8px !important;
+  }
+}
+
+/* Melhorias de acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .MuiAppBar-root,
+  .MuiTabs-root {
+    display: none !important;
+  }
+  
+  .MuiContainer-root {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+  
+  .react-syntax-highlighter {
+    background: white !important;
+    color: black !important;
+    border: 1px solid #ccc !important;
+  }
+}
